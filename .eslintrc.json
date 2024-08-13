@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "eslint-config-standard-with-typescript",
+    "plugin:i18next/recommended"
+  ],
+  "plugins": ["react", "i18next"],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/naming-convention": "off"
+  }
+ }

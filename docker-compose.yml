@@ -1,0 +1,17 @@
+version: "3.7"
+name: 'centrumosk_panel'
+services:
+  node:
+    container_name: centrumosk_panel_node
+    image: centrumosk_panel_node:${API_VERSION}
+    restart: always
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    networks:
+      - nginx-proxy-network
+    volumes:
+      - ./nginx:/etc/nginx/conf.d/:rw
+networks:
+  nginx-proxy-network:
+    external: true
